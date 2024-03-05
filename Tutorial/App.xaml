@@ -1,0 +1,23 @@
+﻿<Application x:Class="Tutorial.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Tutorial"
+             xmlns:viewModel="clr-namespace:Tutorial.MVVM.ViewModel"
+             xmlns:view="clr-namespace:Tutorial.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:ScrapCalcModel}">
+                <view:ScrapCalc/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

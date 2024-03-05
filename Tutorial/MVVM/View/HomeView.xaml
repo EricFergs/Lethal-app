@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Tutorial.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tutorial.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <TextBlock Text="Overtime calc"
+                           Foreground="White"
+                           FontSize="28"
+                           HorizontalAlignment="Left"
+                           Margin="93,0,0,20"
+                           FontFamily="Comic Sans MS"/>
+        <TextBlock Text="Sold"
+                   Foreground="White"
+                   FontSize="24"
+                   HorizontalAlignment="Left"
+                   Margin="50,120,0,0"
+                   FontFamily="Comic Sans MS"/>
+        <TextBlock Text="Quota"
+           Foreground="White"
+           FontSize="24"
+           HorizontalAlignment="Left"
+           Margin="50,230,0,0"
+           FontFamily="Comic Sans MS"/>
+
+        <TextBox Name ="Sold"  Foreground="#CFCFCF" Width="250" Height="40"
+            Style="{StaticResource ModernTextbox}"  Margin="200,-200,0,0"/>
+        <TextBox Name ="Quota" Width="250" Height="68"
+Style="{StaticResource ModernTextbox}" Margin="200,0,0,0"/>
+        <Button Name ="run" Click="run_Click" Width="90" Height="40" Content="Run" FontSize="20" FontFamily="Comic Sans MS" Margin="-60,200,0,0" Background="DarkGray" />
+        <Border BorderBrush="Black" BorderThickness="2" Margin="-200,380,0,0" Height="50" Width="140">
+            <TextBlock Name="result" Background="DarkGray" Text="Results"  FontSize="20" FontFamily="Comic Sans MS" 
+               HorizontalAlignment="Center" Padding="100" VerticalAlignment="Center"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Margin="100,380,0,0" Height="50" Width="140">
+            <TextBlock Name="total" Background="DarkGray" Text="Total"  FontSize="20" FontFamily="Comic Sans MS" 
+       HorizontalAlignment="Center" Padding="100" VerticalAlignment="Center" />
+        </Border>
+
+    </Grid>
+    
+</UserControl>
