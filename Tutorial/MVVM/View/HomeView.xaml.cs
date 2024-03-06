@@ -15,10 +15,6 @@ namespace Tutorial.MVVM.View
             InitializeComponent();
             this.DataContext = new HomeViewModel();
         }
-
-        private void run_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }
