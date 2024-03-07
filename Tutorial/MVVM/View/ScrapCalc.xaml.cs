@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tutorial.MVVM.ViewModel;
 
 namespace Tutorial.MVVM.View
 {
@@ -23,6 +24,7 @@ namespace Tutorial.MVVM.View
         public ScrapCalc()
         {
             InitializeComponent();
+            this.DataContext = new ScrapCalcModel();
         }
     }
 }

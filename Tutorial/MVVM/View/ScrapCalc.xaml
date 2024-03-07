@@ -27,13 +27,13 @@
            Margin="50,230,0,0"
            FontFamily="Comic Sans MS"/>
 
-        <TextBox Width="250" Height="40"
+        <TextBox Text ="{Binding Sold, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="250" Height="40"
             Style="{StaticResource ModernTextbox}" Margin="200,-200,0,0"/>
-        <TextBox Width="250" Height="68"
+        <TextBox Text ="{Binding Total, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="250" Height="68"
 Style="{StaticResource ModernTextbox}" Margin="200,0,0,0"/>
-        <Button Name ="run" Width="90" Height="40" Content="Run" FontSize="20" FontFamily="Comic Sans MS" Margin="-60,200,0,0" Background="DarkGray" />
+        <Button Name ="run" Command ="{Binding ButtonClick}" Width="90" Height="40" Content="Run" FontSize="20" FontFamily="Comic Sans MS" Margin="-60,200,0,0" Background="DarkGray" />
         <Border BorderBrush="Black" BorderThickness="2" Margin="-60,380,0,0" Height="50" Width="140">
-            <TextBlock Name="result" Background="DarkGray" Text="Remaining"  FontSize="20" FontFamily="Comic Sans MS" 
+            <TextBlock Text ="{Binding Result, FallbackValue=Remaining}" Name="result" Background="DarkGray"   FontSize="20" FontFamily="Comic Sans MS" 
                HorizontalAlignment="Center" Padding="100" VerticalAlignment="Center"/>
         </Border>
         
