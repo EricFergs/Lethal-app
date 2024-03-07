@@ -79,6 +79,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\Metallic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\Notepad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\ScrapCalc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,9 +103,17 @@
   <ItemGroup>
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\MetallicViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\NotepadViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ScrapCalcModel.cs" />
     <Compile Include="MVVM\View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\Metallic.xaml.cs">
+      <DependentUpon>Metallic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\Notepad.xaml.cs">
+      <DependentUpon>Notepad.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\ScrapCalc.xaml.cs">
       <DependentUpon>ScrapCalc.xaml</DependentUpon>

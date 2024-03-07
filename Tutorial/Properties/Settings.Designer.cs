@@ -26,5 +26,7 @@ namespace Tutorial.Properties
                 return defaultInstance;
             }
         }
+
+        public string NotepadText { get; internal set; }
     }
 }

@@ -45,12 +45,14 @@
                              Height="100"
                              Foreground="White"
                              FontSize="28"
-                             Style="{StaticResource MenuBottonTheme}"/>
-                <RadioButton Content="Spawn"
+                             Style="{StaticResource MenuBottonTheme}"
+                             Command="{Binding MetallicViewCommand}"/>
+                <RadioButton Content="Notes"
                              Height="100"
                              Foreground="White"
                              FontSize="28"
-                             Style="{StaticResource MenuBottonTheme}"/>
+                             Style="{StaticResource MenuBottonTheme}"
+                             Command="{Binding NoteViewCommand}"/>
                 <RadioButton Content="Close"
                              Height="100"
                              Foreground="White"

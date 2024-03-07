@@ -24,7 +24,6 @@ namespace Tutorial.Core
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
-            Console.WriteLine(name);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }

@@ -18,6 +18,12 @@
             <DataTemplate DataType="{x:Type viewModel:ScrapCalcModel}">
                 <view:ScrapCalc/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:MetallicViewModel}">
+                <view:Metallic/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:NotepadViewModel}">
+                <view:Notepad/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

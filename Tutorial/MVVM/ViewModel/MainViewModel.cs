@@ -15,16 +15,26 @@ namespace Tutorial.MVVM.ViewModel
 
         public RelayCommand ScrapCalcCommand { get; set; }
 
+        public RelayCommand MetallicViewCommand { get; set; }
+
+        public RelayCommand NoteViewCommand { get; set; }
+
         public HomeViewModel HomeVM{ get; set; }
 
         public ScrapCalcModel Calc { get; set; }
 
+        public MetallicViewModel MetalVM { get; set; }
+
+        public NotepadViewModel NoteVM { get; set; }
+
         private object _currentView;
+
+        
 
         public object CurrentView
         {
             get { return _currentView; }
-            set { 
+            set {
                 _currentView = value;
                 OnPropertyChanged();
             }
@@ -34,6 +44,8 @@ namespace Tutorial.MVVM.ViewModel
         {
             HomeVM = new HomeViewModel();
             Calc = new ScrapCalcModel();
+            MetalVM = new MetallicViewModel();
+            NoteVM = new NotepadViewModel();
             CurrentView = HomeVM;
 
             HomeViewCommand = new RelayCommand(o => 
@@ -43,6 +55,14 @@ namespace Tutorial.MVVM.ViewModel
             ScrapCalcCommand = new RelayCommand(o =>
             {
                 CurrentView = Calc;
+            });
+            MetallicViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = MetalVM;
+            });
+            NoteViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = NoteVM;
             });
         }
     }
