@@ -3,6 +3,11 @@ using System.Threading.Tasks;
 using Tutorial.Core;
 using Tutorial.MVVM.View;
 using System;
+using System.Configuration;
+using System.Xml;
+using System.ComponentModel;
+using System.Windows.Documents;
+using System.Windows;
 
 
 
@@ -13,29 +18,47 @@ namespace Tutorial.MVVM.ViewModel
         private string _soldvalue;
         private string _quotavalue;
         private string _total = "Total";
+        private string _result = "Result";
+
         public RelayCommand ButtonClick { get; set; }
-        public string soldValue
+        public string SoldValue
         {
             get { return _soldvalue; }
-            set { _soldvalue = value; OnPropertyChanged(); }
+            set { SetProperty(ref _soldvalue, value); }
         }
 
-        public string quotaValue
+        public string QuotaValue
         {
             get { return _quotavalue; }
-            set { _quotavalue = value; OnPropertyChanged(); }
+            set { SetProperty(ref _quotavalue, value); }
         }
         public string Total
         {
             get { return _total; }
             set { _total = value; OnPropertyChanged(); }
         }
+        public string Result
+        {
+            get { return _result; }
+            set { _result = value; OnPropertyChanged(); }
+        }
         public HomeViewModel()
         {
             ButtonClick = new RelayCommand(o =>
             {
 
-                Total = soldValue + quotaValue;
+                try
+                {
+                    int convertedQuota = int.Parse(QuotaValue);
+                    int convertedSold = int.Parse(SoldValue);
+                    int final = ((convertedSold - convertedQuota) / 5) - 15;
+                    Result = final.ToString();
+                    Total = (final + convertedSold).ToString();
+                }
+                catch(FormatException)
+                {
+                    MessageBox.Show("Hey only numbers >:(");
+                }
             });
         }
         

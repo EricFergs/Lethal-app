@@ -27,13 +27,13 @@
            Margin="50,230,0,0"
            FontFamily="Comic Sans MS"/>
 
-        <TextBox Name ="Sold"  Foreground="#CFCFCF" Text="{Binding soldValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="250" Height="40"
+        <TextBox Name ="Sold"  Foreground="#CFCFCF"  Text="{Binding SoldValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="250" Height="40"
             Style="{StaticResource ModernTextbox}"  Margin="200,-200,0,0"/>
-        <TextBox Name ="Quota" Text ="{Binding quotaValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="250" Height="68"
+        <TextBox Name ="Quota" Text ="{Binding QuotaValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="250" Height="68"
 Style="{StaticResource ModernTextbox}" Margin="200,0,0,0"/>
         <Button Name ="run" Command="{Binding ButtonClick}" Width="90" Height="40" Content="Run" FontSize="20" FontFamily="Comic Sans MS" Margin="-60,200,0,0" Background="DarkGray" />
         <Border BorderBrush="Black" BorderThickness="2" Margin="-200,380,0,0" Height="50" Width="140">
-            <TextBlock Name="result" Background="DarkGray" Text="Results"  FontSize="20" FontFamily="Comic Sans MS" 
+            <TextBlock Name="result" Text="{Binding Result, FallbackValue=Result}" Background="DarkGray"   FontSize="20" FontFamily="Comic Sans MS" 
                HorizontalAlignment="Center" Padding="100" VerticalAlignment="Center"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="2" Margin="100,380,0,0" Height="50" Width="140">

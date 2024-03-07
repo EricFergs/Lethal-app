@@ -12,8 +12,19 @@ namespace Tutorial.Core
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        protected bool SetProperty<T>(ref T backingField, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (Equals(backingField, value))
+                return false;
+
+            backingField = value;
+            OnPropertyChanged(propertyName);
+            return true;
+        }
+
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
+            Console.WriteLine(name);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
